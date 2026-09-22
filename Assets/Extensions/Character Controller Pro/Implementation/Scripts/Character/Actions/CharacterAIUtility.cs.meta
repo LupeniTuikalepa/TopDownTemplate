@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: ae2d19bc83644d28b35d9e7f2e50f701
+timeCreated: 1785875248
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159150
+  packageName: Character Controller Pro
+  packageVersion: 1.5.0
+  assetPath: Assets/Character Controller Pro/Implementation/Scripts/Character/Actions/CharacterAIUtility.cs
+  uploadId: 970624

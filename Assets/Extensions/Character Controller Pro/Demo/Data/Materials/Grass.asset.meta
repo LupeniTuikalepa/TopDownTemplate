@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2c52bd654e5d59b449af41b58247436b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159150
+  packageName: Character Controller Pro
+  packageVersion: 1.5.0
+  assetPath: Assets/Character Controller Pro/Demo/Data/Materials/Grass.asset
+  uploadId: 970624

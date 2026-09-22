@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6e769386856f4cc43a19e2241ade4ac5
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 8404be70184654265930450def6a9037, type: 3}
+  generateWrapperCode: 0
+  wrapperCodePath: 
+  wrapperClassName: 
+  wrapperCodeNamespace: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159150
+  packageName: Character Controller Pro
+  packageVersion: 1.5.0
+  assetPath: Assets/Character Controller Pro/Demo/Input actions/CameraActions.inputactions
+  uploadId: 970624

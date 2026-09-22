@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a703cf626ddb677488299ef2bf2fbcd0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159150
+  packageName: Character Controller Pro
+  packageVersion: 1.5.0
+  assetPath: Assets/Character Controller Pro/Demo/Data/Materials/Resources/Default Surface.asset
+  uploadId: 970624

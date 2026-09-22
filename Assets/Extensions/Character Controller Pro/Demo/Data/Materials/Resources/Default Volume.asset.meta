@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8c320a52df31d324f83b32022733a7da
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159150
+  packageName: Character Controller Pro
+  packageVersion: 1.5.0
+  assetPath: Assets/Character Controller Pro/Demo/Data/Materials/Resources/Default Volume.asset
+  uploadId: 970624

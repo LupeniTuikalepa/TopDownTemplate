@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2362fbc0c9e4c3e4ea8dc9e42dc71269
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159150
+  packageName: Character Controller Pro
+  packageVersion: 1.5.0
+  assetPath: Assets/Character Controller Pro/Demo/Data/Materials/Mud.asset
+  uploadId: 970624

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f82c7b3ab6452af46b835efe5adc1c23
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159150
+  packageName: Character Controller Pro
+  packageVersion: 1.5.0
+  assetPath: Assets/Character Controller Pro/Implementation/Scripts/Inputs/InputHandler/InputSystemHandler.cs
+  uploadId: 970624
