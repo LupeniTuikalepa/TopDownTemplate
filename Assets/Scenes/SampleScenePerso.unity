@@ -368,6 +368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1395350979}
+  - component: {fileID: 1395350983}
   - component: {fileID: 1395350982}
   - component: {fileID: 1395350981}
   - component: {fileID: 1395350980}
@@ -459,7 +460,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 0.02
   playerControls: {fileID: 1726762935}
-  rb: {fileID: 0}
+  rb: {fileID: 1395350981}
+--- !u!114 &1395350983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395350978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee430f5c4ffb0c4ab944bbe7d0d8b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
+  reloadTime: 2
+  maxBulletCount: 10
+  bulletSpeed: 20
+  bulletRange: 5
+  fireRate: 10
+  bulletDamage: 1
+  bulletPrefab: {fileID: 8919554494402467698, guid: cfd3a8bed2a674c4cb5bee12c7c66327, type: 3}
+  playerControls: {fileID: 1726762935}
 --- !u!1 &1501743993
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,13 +783,53 @@ MonoBehaviour:
     m_ActionId: 6393af26-c30a-4f70-8dd9-f0ca0a021f28
     m_ActionName: 'Gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1726762935}
+        m_TargetAssemblyTypeName: PlayerControls, Assembly-CSharp
+        m_MethodName: OnShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 99179b29-01e7-4933-bef9-4085a3b2da72
     m_ActionName: 'Gameplay/Shoot[/Mouse/leftButton,/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1726762935}
+        m_TargetAssemblyTypeName: PlayerControls, Assembly-CSharp
+        m_MethodName: OnAim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 2f6631a0-4f47-4fb6-8035-4d257738e7da
     m_ActionName: 'Gameplay/Aim[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1726762935}
+        m_TargetAssemblyTypeName: PlayerControls, Assembly-CSharp
+        m_MethodName: OnReload
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0e2207a4-745d-4e6c-9cd7-de5c7abfc498
+    m_ActionName: 'Gameplay/Reload[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -788,6 +849,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
   playerInput: {fileID: 1726762934}
   movementInput: {x: 0, y: 0}
+  aimInput: {x: 0, y: 0}
+  isShooting: 0
+  isReloading: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
