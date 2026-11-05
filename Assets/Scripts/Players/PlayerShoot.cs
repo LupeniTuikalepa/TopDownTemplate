@@ -33,8 +33,11 @@ public class PlayerShoot : MonoBehaviour
     [Header("References")] [SerializeField]
     private GameObject bulletPrefab;
 
-    [SerializeField] private PlayerControls playerControls;
+    [SerializeField] 
+    private PlayerControls playerControls;
 
+    [SerializeField] 
+    private Transform gun;
 
     private void Start()
     {
@@ -115,7 +118,8 @@ public class PlayerShoot : MonoBehaviour
     private void Shoot()
     {
         //Spawn la balle et on stock le gameobject
-        GameObject spawnedBullet = Instantiate(bulletPrefab);
+        //La balle spawn a la position du gun et avec son orientation
+        GameObject spawnedBullet = Instantiate(bulletPrefab, gun.position, gun.rotation);
 
         //On regarde si il a le script
         Bullet leScriptDeLaBalle = spawnedBullet.GetComponent<Bullet>();
