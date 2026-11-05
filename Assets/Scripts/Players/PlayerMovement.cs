@@ -27,7 +27,4 @@ public class PlayerMovement : MonoBehaviour
         
         rb.linearVelocity =  velocity;
     }
-
-
-
 }
