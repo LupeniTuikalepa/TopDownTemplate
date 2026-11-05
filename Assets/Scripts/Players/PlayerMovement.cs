@@ -35,6 +35,13 @@ public class PlayerMovement : MonoBehaviour
         //On recupere l'input
         Vector2 input = playerControls.aimInput;
         
+        //Si je ne touche pas au stick alors ça sert a rien de tourner.
+        // Est ce que la taille du vecteur est un peu superieure a 0.
+        
+        //sqrMagnitude : A utiliser dans 90% des cas, quand la valeur EXACTE de la taille d'un vecteur n'est pas nécéssaire
+        if(input.sqrMagnitude <= 0.1f)
+            return;
+        
         Vector3 direction = new Vector3(input.x, 0, input.y);
         
         /*
