@@ -15,14 +15,25 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Bruh");
+        //S'auto detruit
+        Destroy(gameObject);
     }
 
     //Optionnel
     //Mathf.Abs = Valeur absolue (donc positive)
-    public void Heal(int amount) => AddOrRemoveHealth(Mathf.Abs(amount));
-    public void Damage(int amount) => AddOrRemoveHealth(-Mathf.Abs(amount));
-    
+    public void Heal(int amount)
+    {
+        int positiveAmount = Mathf.Abs(amount);
+        AddOrRemoveHealth(positiveAmount);
+    }
+
+    public void Damage(int amount)
+    {
+        int negativeAmount = -Mathf.Abs(amount);
+        AddOrRemoveHealth(negativeAmount);
+    }
+
+
     public void AddOrRemoveHealth(int health)
     {
         //Modification de la vie

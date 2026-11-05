@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 240040123}
   - component: {fileID: 240040126}
   - component: {fileID: 240040125}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 1395350982}
   - component: {fileID: 1395350981}
   - component: {fileID: 1395350980}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 1501743997}
   - component: {fileID: 1501743996}
   - component: {fileID: 1501743995}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +969,7 @@ GameObject:
   - component: {fileID: 1726762933}
   - component: {fileID: 1726762934}
   - component: {fileID: 1726762935}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1114,7 +1114,8 @@ GameObject:
   - component: {fileID: 1850008012}
   - component: {fileID: 1850008011}
   - component: {fileID: 1850008010}
-  m_Layer: 0
+  - component: {fileID: 1850008014}
+  m_Layer: 7
   m_Name: PunchingBag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1214,6 +1215,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1850008014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850008009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5864ef49f2b3294881e151c4f73f4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  maxHealth: 30
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
