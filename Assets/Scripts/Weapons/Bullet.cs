@@ -7,19 +7,18 @@ public class Bullet : MonoBehaviour
     private Rigidbody rb;
 
     private int bulletDamage;
-    
-    private void Start()
-    {
-        //Detruit la balle dans 15 secondes
-        //C'est un * Garde fou *
-        Destroy(gameObject, 15);
-    }
 
-    public void Fire(Vector3 direction, float speed, int damage)
+    public void Fire(Vector3 direction, float speed, int damage, float range)
     {
         rb.linearVelocity = direction.normalized * speed;
-        
         bulletDamage = damage;
+        
+        //Produit en croix
+        //Duree de vie balle = (1 * Range) / Vitesse
+        //Duree de vie balle = Range / Vitesse
+        
+        float bulletLifetime = range / speed;
+        Destroy(gameObject, bulletLifetime);
     }
 
     private void OnCollisionEnter(Collision collision)

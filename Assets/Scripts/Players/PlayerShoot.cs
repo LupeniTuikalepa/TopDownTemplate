@@ -125,7 +125,7 @@ public class PlayerShoot : MonoBehaviour
         Bullet leScriptDeLaBalle = spawnedBullet.GetComponent<Bullet>();
 
         //On execute Fire du script sur la balle qu'on a spawn
-        leScriptDeLaBalle.Fire(transform.forward, bulletSpeed, bulletDamage);
+        leScriptDeLaBalle.Fire(transform.forward, bulletSpeed, bulletDamage, bulletRange);
 
         //currentBulletCount--; : Enlever 1.
         //currentBulletCount++; : Ajouter 1
