@@ -1,4 +1,5 @@
 using System;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
@@ -29,7 +30,7 @@ public class PlayerShoot : MonoBehaviour
 
     //Degats de balles
     [SerializeField] private int bulletDamage;
-
+    
     [Header("References")] [SerializeField]
     private GameObject bulletPrefab;
 
@@ -39,6 +40,19 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] 
     private Transform gun;
 
+    //Reference au prefab a spawn
+    [SerializeField] 
+    private GameObject muzzleFlashPrefab;
+
+    [SerializeField] 
+    //Script qui envoi le signal du screen shake
+    private CinemachineImpulseSource shootImpulseSource;
+
+    [SerializeField] 
+    private AudioSource fireSource;
+    [SerializeField] 
+    private AudioSource reloadSource;
+    
     private void Start()
     {
         Reload();
@@ -131,17 +145,62 @@ public class PlayerShoot : MonoBehaviour
         //currentBulletCount++; : Ajouter 1
         
         currentBulletCount -= 1;
+        
+        //Si un prefab de flash a été assigné...
+        //Vu que c'est secondaire, on autorise un oubli
+        if (muzzleFlashPrefab != null)
+        {
+            //Spawn le vfx sur le gun avec l'orientation du gun
+            //Boom
+            GameObject spawnedVFX = Instantiate(muzzleFlashPrefab, gun.position, gun.rotation);
+        }
+        //Si on a une impulse source...
+        if(shootImpulseSource != null)
+        {
+            //Generer un screen-shake avec une force de 0.2
+            shootImpulseSource.GenerateImpulseWithForce(.2f);
+        }
+
+        if (fireSource != null)
+        {
+            //Version simple mais tirer coupe le son du tir précédent
+            //fireSource.Play();
+            
+            //On crée une source par tir pour pouvoir superposer les sons.
+            AudioSource copy = Instantiate(fireSource, transform);
+            
+            //On joue le son sur la copie
+            copy.Play();
+
+            //Detruire la copie après 2 secondes
+            Destroy(copy.gameObject, 2f);
+        }
     }
 
 
     private void Reload()
     {
         currentBulletCount = maxBulletCount;
-        //Debug.Log("Reload");
+        
+        if (reloadSource != null)
+        {
+            reloadSource.Play();
+        }
     }
 
     private void Aim()
     {
         //Debug.Log($"Aiming {playerControls.aimInput}");
+    }
+
+    // "Accesseurs" : On peut lire la valeur mais pas la modifier.
+    public int GetCurrentBulletCount()
+    {
+        return currentBulletCount;
+    }
+
+    public int GetMaxBulletCount()
+    {
+        return maxBulletCount;
     }
 }
