@@ -1013,7 +1013,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 586c9c6a070e5fc4fbc455a119d43643, type: 3}
+  m_Resource: {fileID: 6418180475301049370, guid: 590a50e8d6f87bd469008a89cdb26268, type: 2}
   m_PlayOnAwake: 0
   m_Volume: 0.4
   m_Pitch: 1
@@ -1225,6 +1225,8 @@ MonoBehaviour:
   gun: {fileID: 240040123}
   muzzleFlashPrefab: {fileID: 8757360845398324554, guid: ed856f6912407e3449c269cdb376d821, type: 3}
   shootImpulseSource: {fileID: 240040127}
+  fireSource: {fileID: 1174577294}
+  reloadSource: {fileID: 624630554}
 --- !u!1 &1501743993
 GameObject:
   m_ObjectHideFlags: 0
